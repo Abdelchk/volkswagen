@@ -1,15 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Volkswagen - Votre concessionnaire de confiance{% endblock %}
+{% block title %}CB Automobiles Paris - Concessionnaire Volkswagen | Véhicules neufs et occasion{% endblock %}
+
+{% block meta_description %}Découvrez CB Automobiles, votre concessionnaire Volkswagen à Paris. Large choix de véhicules neufs et d'occasion : Golf, Tiguan, ID.4. Service après-vente professionnel.{% endblock %}
+
+{% block meta_keywords %}concessionnaire Volkswagen Paris, Golf 8, Tiguan, ID.4 électrique, véhicules neufs, voitures occasion, entretien automobile, financement auto{% endblock %}
 
 {% block body %}
 
-<!-- Hero Section -->
 <section id="accueil" class="hero-section d-flex align-items-center">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="display-4 fw-bold mb-4">Découvrez l'excellence Volkswagen</h1>
+                <h1 class="display-4 fw-bold mb-4">Découvrez l'excellence CB Automobiles</h1>
                 <p class="lead mb-4">Explorez notre gamme complète de véhicules alliant innovation, qualité et performance. Trouvez la voiture qui vous correspond.</p>
                 <div class="d-flex gap-3">
                     <a href="#vehicules" class="btn btn-vw-primary btn-lg">Voir nos véhicules</a>
@@ -17,14 +20,13 @@
                 </div>
             </div>
             <div class="col-lg-6 text-center">
-                <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                     class="img-fluid rounded shadow-lg" alt="Volkswagen">
+                <img src="https://images.prismic.io/carwow/aCx9aSdWJ-7kSWE-_VolkswagenTiguan2025exteriorfrontviewdrivinghero.jpg" 
+                     class="img-fluid rounded shadow-lg" alt="Volkswagen Tiguan 2025 - SUV familial moderne et performant">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Véhicules Section -->
 <section id="vehicules" class="py-5">
     <div class="container">
         <div class="row">
@@ -36,10 +38,10 @@
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <div class="card car-card h-100">
-                    <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                         class="card-img-top" alt="Golf 8">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgDZBxb-rRMy6tokAFWkJ5mRgUAx_iw8zhFg&s" 
+                         class="card-img-top" alt="Volkswagen Golf 8 - Berline compacte de référence">
                     <div class="card-body">
-                        <h5 class="card-title">Golf 8</h5>
+                        <h3 class="card-title">Golf 8</h3>
                         <p class="card-text">La référence des compactes. Technologie avancée, confort optimal et performances exceptionnelles.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="text-primary fw-bold">À partir de 28 900 €</span>
@@ -50,10 +52,10 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card car-card h-100">
-                    <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                         class="card-img-top" alt="Tiguan">
+                    <img src="https://images.prismic.io/carwow/aCx9aSdWJ-7kSWE-_VolkswagenTiguan2025exteriorfrontviewdrivinghero.jpg" 
+                         class="card-img-top" alt="Volkswagen Tiguan - SUV familial polyvalent et spacieux">
                     <div class="card-body">
-                        <h5 class="card-title">Tiguan</h5>
+                        <h3 class="card-title">Tiguan</h3>
                         <p class="card-text">SUV familial par excellence. Espace, polyvalence et sécurité pour toutes vos aventures.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="text-primary fw-bold">À partir de 35 400 €</span>
@@ -64,10 +66,10 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card car-card h-100">
-                    <img src="https://images.unsplash.com/photo-1619976215249-95ad80e4154e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                         class="card-img-top" alt="ID.4">
+                    <img src="https://www.topgear.com/sites/default/files/2025/05/Original-39041-0036-vw-id4-luc-lacey.jpg" 
+                         class="card-img-top" alt="Volkswagen ID.4 électrique - SUV 100% électrique autonomie longue">
                     <div class="card-body">
-                        <h5 class="card-title">ID.4</h5>
+                        <h3 class="card-title">ID.4</h3>
                         <p class="card-text">L'avenir de la mobilité électrique. Autonomie exceptionnelle et conduite silencieuse.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="text-primary fw-bold">À partir de 45 900 €</span>
@@ -83,7 +85,6 @@
     </div>
 </section>
 
-<!-- Services Section -->
 <section id="services" class="py-5 bg-light">
     <div class="container">
         <div class="row">
@@ -97,7 +98,7 @@
                 <div class="card border-0 h-100">
                     <div class="card-body">
                         <i class="fas fa-tools fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Entretien & Réparation</h5>
+                        <h3 class="card-title">Entretien & Réparation</h3>
                         <p class="card-text">Services d'entretien et de réparation par nos techniciens certifiés.</p>
                     </div>
                 </div>
@@ -106,7 +107,7 @@
                 <div class="card border-0 h-100">
                     <div class="card-body">
                         <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Financement</h5>
+                        <h3 class="card-title">Financement</h3>
                         <p class="card-text">Solutions de financement adaptées à votre budget et vos besoins.</p>
                     </div>
                 </div>
@@ -115,7 +116,7 @@
                 <div class="card border-0 h-100">
                     <div class="card-body">
                         <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Garantie</h5>
+                        <h3 class="card-title">Garantie</h3>
                         <p class="card-text">Garanties étendues pour une tranquillité d'esprit totale.</p>
                     </div>
                 </div>
@@ -124,7 +125,7 @@
                 <div class="card border-0 h-100">
                     <div class="card-body">
                         <i class="fas fa-exchange-alt fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Reprise</h5>
+                        <h3 class="card-title">Reprise</h3>
                         <p class="card-text">Estimation et reprise de votre véhicule actuel au meilleur prix.</p>
                     </div>
                 </div>
@@ -133,13 +134,12 @@
     </div>
 </section>
 
-<!-- À propos Section -->
 <section id="apropos" class="py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <img src="https://images.unsplash.com/photo-1562141961-aeec36ca9c39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                     class="img-fluid rounded shadow" alt="Notre concession">
+                <img src="https://vivacar-website-api.automanager.fr/uploads/Webp/concessions%20automobiles.webp" 
+                     class="img-fluid rounded shadow" alt="Concession CB Automobiles - showroom moderne et accueillant">
             </div>
             <div class="col-lg-6">
                 <h2 class="section-title">Votre concessionnaire de confiance</h2>
@@ -176,66 +176,6 @@
     </div>
 </section>
 
-<!-- Témoignages Section -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="section-title">Nos clients témoignent</h2>
-                <p class="lead text-muted">Découvrez les avis de nos clients satisfaits</p>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="card border-0 h-100 text-center">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                        </div>
-                        <p class="card-text">"Excellent service client et équipe très professionnelle. Ma Golf 8 fonctionne parfaitement !"</p>
-                        <footer class="blockquote-footer">Marie L.</footer>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card border-0 h-100 text-center">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                        </div>
-                        <p class="card-text">"Très satisfait de mon Tiguan. L'équipe a su me conseiller selon mes besoins familiaux."</p>
-                        <footer class="blockquote-footer">Pierre D.</footer>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card border-0 h-100 text-center">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                        </div>
-                        <p class="card-text">"Passage à l'électrique facilité grâce à leur expertise. Mon ID.4 est fantastique !"</p>
-                        <footer class="blockquote-footer">Sophie M.</footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
 <section id="contact" class="py-5">
     <div class="container">
         <div class="row">

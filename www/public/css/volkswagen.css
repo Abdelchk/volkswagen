@@ -1,11 +1,6 @@
-/* Styles supplémentaires pour le site vitrine Volkswagen */
-
-/* Animation smooth scroll */
 html {
     scroll-behavior: smooth;
 }
-
-/* Hero section améliorée */
 .hero-section {
     position: relative;
     overflow: hidden;
@@ -27,7 +22,6 @@ html {
     z-index: 2;
 }
 
-/* Cards avec effet glassmorphism */
 .car-card {
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.95);
@@ -38,7 +32,6 @@ html {
     box-shadow: 0 20px 40px rgba(0,60,113,0.2);
 }
 
-/* Boutons personnalisés */
 .btn-vw-primary {
     background: linear-gradient(135deg, var(--vw-blue) 0%, var(--vw-light-blue) 100%);
     border: none;
@@ -54,17 +47,14 @@ html {
     box-shadow: 0 8px 20px rgba(0,60,113,0.3);
 }
 
-/* Navigation sticky */
 .navbar {
     transition: all 0.3s ease;
 }
 
-/* Sections avec espacement cohérent */
 section {
     position: relative;
 }
 
-/* Animations d'entrée */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -76,7 +66,6 @@ section {
     transform: translateY(0);
 }
 
-/* Footer styling */
 .footer {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
@@ -97,7 +86,6 @@ section {
     transform: translateY(-2px);
 }
 
-/* Responsive improvements */
 @media (max-width: 768px) {
     .hero-section {
         min-height: 500px;
@@ -118,24 +106,20 @@ section {
     }
 }
 
-/* Prix styling */
 .text-primary.fw-bold {
     font-size: 1.2rem;
     color: var(--vw-blue) !important;
 }
 
-/* Cards uniformes */
 .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-/* Témoignages */
 .fas.fa-star.text-warning {
     color: #ffc107 !important;
 }
 
-/* Contact cards */
 .card.border-0.shadow-sm {
     transition: transform 0.3s ease;
 }
@@ -144,7 +128,6 @@ section {
     transform: translateY(-5px);
 }
 
-/* Form styling */
 .form-control, .form-select {
     border-radius: 8px;
     border: 2px solid #e9ecef;
@@ -156,7 +139,6 @@ section {
     box-shadow: 0 0 0 0.2rem rgba(0,60,113,0.25);
 }
 
-/* Section titles */
 .section-title {
     position: relative;
     display: inline-block;

@@ -24,14 +24,8 @@ final class HomeController extends AbstractController
             1 => [
                 'title' => 'Les dernières innovations Volkswagen',
                 'content' => 'Découvrez les technologies de pointe qui équipent nos derniers véhicules',
-                'image' => 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                'image' => 'https://cdn.motor1.com/images/mgl/28Lyn/s3/volkswagen-taigo-r-line.jpg',
                 'date' => '2024-10-15'
-            ],
-            2 => [
-                'title' => 'Conduite électrique : l\'avenir commence maintenant',
-                'content' => 'Explorez notre gamme ID. et découvrez les avantages de la mobilité électrique',
-                'image' => 'https://images.unsplash.com/photo-1619976215249-95ad80e4154e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-                'date' => '2024-10-12'
             ]
         ];
 
@@ -64,7 +58,7 @@ final class HomeController extends AbstractController
                 'year' => 2021,
                 'mileage' => 22000,
                 'fuel' => 'Diesel',
-                'image' => 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+                'image' => 'https://images.prismic.io/carwow/aCx9aSdWJ-7kSWE-_VolkswagenTiguan2025exteriorfrontviewdrivinghero.jpg'
             ],
             [
                 'id' => 3,
@@ -96,9 +90,9 @@ final class HomeController extends AbstractController
                 'transmission' => 'Automatique',
                 'description' => 'SUV compact alliant style et performance. Parfait pour la ville et les escapades.',
                 'images' => [
-                    'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                    'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                    'https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                    'https://im.qccdn.fr/node/actualite-volkswagen-t-roc-2022-premieres-impressions-99276/thumbnail_1000x600px-138294.jpg',
+                    'https://im.qccdn.fr/node/actualite-volkswagen-t-roc-2022-premieres-impressions-99276/inline-100488.jpg',
+                    'https://www.stefusto.com/wp-content/uploads/2024/10/dimensions-coffre-t-roc-guide-comparatif-suv-1728404785-1024x585.jpg'
                 ],
                 'equipments' => [
                     'Climatisation automatique',
@@ -131,7 +125,7 @@ final class HomeController extends AbstractController
             [
                 'name' => 'Marie Dubois',
                 'role' => 'Directrice générale',
-                'image' => 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+                'image' => 'https://media.istockphoto.com/id/1389348844/fr/photo/plan-de-studio-dune-belle-jeune-femme-souriante-debout-sur-un-fond-gris.jpg?s=612x612&w=0&k=20&c=VGipX3a8xrbYuXTNm_61pFuzpGdAO9lwt2xnVUd7Khs='
             ],
             [
                 'name' => 'Pierre Martin',

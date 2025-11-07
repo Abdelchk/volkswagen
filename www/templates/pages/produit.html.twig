@@ -1,10 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ vehicle.name }} - CB Automobiles{% endblock %}
+{% block title %}{{ vehicle.name }} - Fiche détaillée | CB Automobiles Paris{% endblock %}
+
+{% block meta_description %}Découvrez le {{ vehicle.name }} chez CB Automobiles. Prix : {{ vehicle.price|number_format(0, '.', ' ') }}€. Année {{ vehicle.year }}, {{ vehicle.mileage|number_format(0, '.', ' ') }} km. Financement disponible.{% endblock %}
+
+{% block meta_keywords %}{{ vehicle.name }}, {{ vehicle.fuel }}, {{ vehicle.transmission }}, véhicule occasion, CB Automobiles, Paris, {{ vehicle.year }}{% endblock %}
 
 {% block body %}
 
-<!-- Breadcrumb -->
 <nav aria-label="breadcrumb" class="py-3" style="background-color: var(--vw-gray);">
     <div class="container">
         <ol class="breadcrumb mb-0">
@@ -15,7 +18,6 @@
     </div>
 </nav>
 
-<!-- Vehicle Header -->
 <section class="py-4 bg-light">
     <div class="container">
         <div class="row align-items-center">
@@ -37,7 +39,7 @@
                         <i class="fas fa-share me-2"></i>Partager
                     </button>
                     <button class="btn btn-outline-secondary">
-                        <i class="fas fa-print me-2"></i>Imprimer
+                        <i class="fab fa-facebook-f"></i>
                     </button>
                     <button class="btn btn-outline-secondary">
                         <i class="fab fa-twitter"></i>
@@ -48,27 +50,24 @@
     </div>
 </section>
 
-<!-- Vehicle Gallery and Info -->
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <!-- Gallery -->
             <div class="col-lg-8">
                 <div class="mb-4">
-                    <!-- Main Image -->
                     <div class="position-relative">
-                        <img src="{{ vehicle.images[0] }}" class="img-fluid rounded shadow" alt="{{ vehicle.name }}" id="mainImage" style="width: 100%; height: 400px; object-fit: cover;">
+                        <img src="{{ vehicle.images[0] }}" class="img-fluid rounded shadow" alt="{{ vehicle.name }} - vue principale du véhicule d'occasion" id="mainImage" style="width: 100%; height: 400px; object-fit: cover;">
                         <div class="position-absolute bottom-0 start-0 m-3">
                             <span class="badge bg-dark fs-6">{{ vehicle.images|length }} photos</span>
                         </div>
                     </div>
 
-                    <!-- Thumbnail Gallery -->
                     <div class="row g-2 mt-3">
                         {% for image in vehicle.images %}
                         <div class="col-3">
                             <img src="{{ image }}" class="img-fluid rounded shadow-sm thumbnail-image cursor-pointer" 
                                  style="height: 80px; object-fit: cover; width: 100%;" 
+                                 alt="{{ vehicle.name }} - photo {{ loop.index }}"
                                  onclick="changeMainImage('{{ image }}')">
                         </div>
                         {% endfor %}
@@ -80,7 +79,6 @@
                     </div>
                 </div>
 
-                <!-- Vehicle Details Tabs -->
                 <div class="card border-0 shadow-sm">
                     <div class="card-header bg-white">
                         <ul class="nav nav-tabs card-header-tabs" id="vehicleTabs" role="tablist">
@@ -103,11 +101,10 @@
                     </div>
                     <div class="card-body">
                         <div class="tab-content" id="vehicleTabsContent">
-                            <!-- Véhicule Tab -->
                             <div class="tab-pane fade show active" id="vehicule" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5 class="mb-3">Caractéristiques principales</h5>
+                                        <h3 class="mb-3">Caractéristiques principales</h3>
                                         <ul class="list-unstyled">
                                             <li class="mb-2">
                                                 <i class="fas fa-calendar text-primary me-2"></i>
@@ -128,16 +125,15 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5 class="mb-3">Description</h5>
+                                        <h3 class="mb-3">Description</h3>
                                         <p>{{ vehicle.description }}</p>
                                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Équipements Tab -->
                             <div class="tab-pane fade" id="equipements" role="tabpanel">
-                                <h5 class="mb-3">Équipements de série</h5>
+                                <h3 class="mb-3">Équipements de série</h3>
                                 <div class="row">
                                     {% for equipment in vehicle.equipments %}
                                     <div class="col-md-6 mb-2">
@@ -148,9 +144,8 @@
                                 </div>
                             </div>
 
-                            <!-- Options Tab -->
                             <div class="tab-pane fade" id="options" role="tabpanel">
-                                <h5 class="mb-3">Options disponibles</h5>
+                                <h3 class="mb-3">Options disponibles</h3>
                                 <div class="row">
                                     {% for option in vehicle.options %}
                                     <div class="col-md-6 mb-2">
@@ -165,11 +160,9 @@
                 </div>
             </div>
 
-            <!-- Sidebar -->
             <div class="col-lg-4">
                 <div class="position-sticky" style="top: 2rem;">
                     
-                    <!-- Price Card -->
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body text-center">
                             <h3 class="text-primary fw-bold">{{ vehicle.price|number_format(0, '.', ' ') }} €</h3>
@@ -182,14 +175,10 @@
                                 <button class="btn btn-outline-primary">
                                     <i class="fas fa-calendar me-2"></i>Prendre rendez-vous
                                 </button>
-                                <button class="btn btn-outline-secondary">
-                                    <i class="fas fa-calculator me-2"></i>Simuler financement
-                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Quick Info -->
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-header bg-primary text-white">
                             <h6 class="mb-0">Informations rapides</h6>
@@ -228,12 +217,11 @@
                         </div>
                     </div>
 
-                    <!-- Dealer Info -->
                     <div class="card border-0 shadow-sm">
                         <div class="card-body text-center">
                             <h6 class="mb-3">Votre conseiller</h6>
                             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
-                                 class="rounded-circle mb-3" width="80" height="80" alt="Conseiller">
+                                 class="rounded-circle mb-3" width="80" height="80" alt="Pierre Martin - Conseiller commercial CB Automobiles">
                             <h6>Pierre Martin</h6>
                             <p class="text-muted small">Conseiller commercial</p>
                             <div class="d-grid gap-2">
@@ -253,7 +241,6 @@
     </div>
 </section>
 
-<!-- Contact Form -->
 <section class="py-5 bg-dark text-white">
     <div class="container">
         <div class="row justify-content-center">
@@ -321,7 +308,6 @@
 function changeMainImage(imageSrc) {
     document.getElementById('mainImage').src = imageSrc;
     
-    // Update active thumbnail
     document.querySelectorAll('.thumbnail-image').forEach(thumb => {
         thumb.classList.remove('border-primary');
         if (thumb.src === imageSrc) {
@@ -330,7 +316,6 @@ function changeMainImage(imageSrc) {
     });
 }
 
-// Set initial active thumbnail
 document.addEventListener('DOMContentLoaded', function() {
     const firstThumbnail = document.querySelector('.thumbnail-image');
     if (firstThumbnail) {

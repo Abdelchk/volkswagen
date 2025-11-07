@@ -4,7 +4,6 @@
 
 {% block body %}
 
-<!-- Hero Section Occasion -->
 <section class="py-5" style="background: linear-gradient(135deg, rgba(0,60,113,0.9) 0%, rgba(30,90,168,0.8) 100%), url('https://images.unsplash.com/photo-1562141961-aeec36ca9c39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;">
     <div class="container">
         <div class="row align-items-center text-white">
@@ -27,7 +26,6 @@
     </div>
 </section>
 
-<!-- Search and Filters -->
 <section class="py-4 bg-light border-bottom">
     <div class="container">
         <div class="row">
@@ -43,8 +41,8 @@
                     </div>
                     <div class="d-flex gap-2">
                         <button class="btn btn-outline-primary">Nouveautés</button>
-                        <button class="btn btn-outline-secondary">Part en leasing</button>
-                        <button class="btn btn-warning">Premiums</button>
+                        <button class="btn btn-outline-secondary">Petit prix</button>
+                        <button class="btn btn-warning">Pépites</button>
                     </div>
                     <div class="text-end">
                         <span class="text-muted">Mon comparateur</span>
@@ -56,16 +54,13 @@
     </div>
 </section>
 
-<!-- Main Content -->
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <!-- Filters Sidebar -->
             <div class="col-lg-3">
                 <div class="position-sticky" style="top: 2rem;">
                     <h5 class="mb-4">Filtres</h5>
                     
-                    <!-- Trier par -->
                     <div class="card border-0 shadow-sm mb-3">
                         <div class="card-header bg-white">
                             <h6 class="mb-0">Trier par</h6>
@@ -80,7 +75,6 @@
                         </div>
                     </div>
 
-                    <!-- Prix -->
                     <div class="card border-0 shadow-sm mb-3">
                         <div class="card-header bg-white">
                             <h6 class="mb-0">Prix</h6>
@@ -97,7 +91,6 @@
                         </div>
                     </div>
 
-                    <!-- Modèle -->
                     <div class="card border-0 shadow-sm mb-3">
                         <div class="card-header bg-white">
                             <h6 class="mb-0">Modèle</h6>
@@ -118,7 +111,6 @@
                         </div>
                     </div>
 
-                    <!-- Marque -->
                     <div class="card border-0 shadow-sm mb-3">
                         <div class="card-header bg-white">
                             <h6 class="mb-0">Marque</h6>
@@ -139,7 +131,6 @@
                         </div>
                     </div>
 
-                    <!-- Type -->
                     <div class="card border-0 shadow-sm mb-3">
                         <div class="card-header bg-white">
                             <h6 class="mb-0">Type</h6>
@@ -155,7 +146,6 @@
                         </div>
                     </div>
 
-                    <!-- Énergie -->
                     <div class="card border-0 shadow-sm mb-3">
                         <div class="card-header bg-white">
                             <h6 class="mb-0">Énergie</h6>
@@ -179,7 +169,6 @@
                 </div>
             </div>
 
-            <!-- Vehicles Grid -->
             <div class="col-lg-9">
                 <div class="row g-4">
                     {% for vehicle in vehicles %}
@@ -225,41 +214,6 @@
                     </div>
                     {% endfor %}
 
-                    <!-- Additional vehicles for demo -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card border-0 shadow-sm h-100 vehicle-card">
-                            <div class="position-relative">
-                                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" style="height: 200px; object-fit: cover;">
-                                <div class="position-absolute top-0 end-0 m-2">
-                                    <button class="btn btn-light btn-sm rounded-circle">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="btn btn-light btn-sm rounded-circle ms-1">
-                                        <i class="fas fa-share"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Prix €</h5>
-                                <h6 class="text-primary fw-bold fs-5">24 900 €</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">Nom de la voiture</h6>
-                                <p class="card-text">Polo</p>
-                                
-                                <div class="d-flex justify-content-between text-muted small mb-3">
-                                    <span>2021</span>
-                                    <span>Essence</span>
-                                    <span>18 500 km</span>
-                                </div>
-
-                                <p class="card-text small text-muted">
-                                    Retrouvez ce modèle sur le site Spirit requisque quia illum détails enim sunt qui custidorem feugiat.
-                                </p>
-
-                                <a href="#" class="btn btn-dark btn-sm w-100">En savoir plus</a>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="col-lg-4 col-md-6">
                         <div class="card border-0 shadow-sm h-100 vehicle-card">
                             <div class="position-relative">
@@ -279,8 +233,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Prix €</h5>
                                 <h6 class="text-primary fw-bold fs-5">35 900 €</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">Nom de la voiture</h6>
-                                <p class="card-text">Arteon</p>
+                                <h6 class="card-subtitle mb-2 text-muted">Voiture</h6>
+                                <p class="card-text">Marque</p>
                                 
                                 <div class="d-flex justify-content-between text-muted small mb-3">
                                     <span>2023</span>
@@ -298,27 +252,6 @@
                     </div>
 
                 </div>
-
-                <!-- Pagination -->
-                <nav class="mt-5">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Précédent</a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Suivant</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>

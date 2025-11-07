@@ -27,6 +27,5 @@ yarn-error.log
 ###< symfony/asset-mapper ###
 
 ###> Custom ignores ###
-/data/
-/bin/
+
 ###< Custom ignores ###

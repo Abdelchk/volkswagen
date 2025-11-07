@@ -1,7 +1,4 @@
-// JavaScript pour le site vitrine Volkswagen
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Navigation sticky effect
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', function() {
@@ -16,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -30,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Fade in animation on scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -44,13 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe elements for fade in effect
     document.querySelectorAll('.car-card, .section-title, .card').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
 
-    // Counter animation for stats (if needed)
     function animateCounter(element, start, end, duration) {
         let startTime = null;
         
@@ -68,13 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(step);
     }
 
-    // Form validation and enhancement
     const contactForm = document.querySelector('#contact form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Simple validation
             const requiredFields = contactForm.querySelectorAll('[required]');
             let isValid = true;
             
@@ -89,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (isValid) {
-                // Simulate form submission
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
                 
@@ -116,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Car card hover effect enhancement
     document.querySelectorAll('.car-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px) scale(1.02)';
@@ -127,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Hero section parallax effect
     const heroSection = document.querySelector('.hero-section');
     if (heroSection) {
         window.addEventListener('scroll', function() {
@@ -137,13 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add loading animation
     window.addEventListener('load', function() {
         document.body.classList.add('loaded');
     });
 });
 
-// Utility function for lazy loading images
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[data-src]');
     
